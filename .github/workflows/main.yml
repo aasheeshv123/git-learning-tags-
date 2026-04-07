@@ -1,0 +1,14 @@
+name: Tag Trigger Demo
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "Tag triggered pipeline running"
